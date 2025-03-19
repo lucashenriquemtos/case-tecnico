@@ -5,8 +5,10 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - mysql
-      - redis
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     networks:
