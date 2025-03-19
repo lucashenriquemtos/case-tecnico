@@ -43,8 +43,4 @@ public class PedidoController {
         List<PedidoResponseDTO> pedidos = pedidoService.listarPedidosPorUsuario(usuarioId);
         return ResponseEntity.ok(pedidos);
     }
-
-
-
-
 }
